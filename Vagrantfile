@@ -20,7 +20,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         v.cpus   = 2
       end
 
-      srv.vm.network "forwarded_port", guest: 80, host: 8090, auto_correct: true # winrm
+      srv.vm.network "private_network", ip: servers["ip"]
+
+      srv.vm.network "forwarded_port", guest: 3000, host: 8090, auto_correct: true # winrm
       srv.vm.provision :shell, path: 'scripts/bootstrap_master.sh'
     end
   end
