@@ -2,5 +2,5 @@
 - name: mastermind
   box: geerlingguy/centos6
   hostname: master.server
-  ram: 1024
+  ram: 4096
 
