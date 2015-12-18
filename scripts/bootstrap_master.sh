@@ -12,6 +12,5 @@
 wget --quiet https://s3.amazonaws.com/pe-builds/released/2015.3.0/puppet-enterprise-2015.3.0-el-6-x86_64.tar.gz
 
 
-
 #rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
 #yum install puppetserver -y
