@@ -14,7 +14,7 @@ fi
 # ELSE PRINT MESSAGE
 
 # 
-if ! dpkg -l "puppet-agent" &> /dev/null ; then
+if ! rpm -q "puppet-agent" &> /dev/null ; then
   echo "Installing puppet master"
   sudo tar -zxvf /home/vagrant/puppet-enterprise-2015.3.0-el-6-x86_64.tar.gz
   cd /home/vagrant/puppet-enterprise-2015.3.0-el-6-x86_64 && ./puppet-enterprise-installer -a /vagrant/scripts/master.server.answers
